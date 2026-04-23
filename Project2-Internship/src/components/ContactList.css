@@ -1,0 +1,56 @@
+/* ===========================
+   ContactList Styles
+   =========================== */
+
+.list-section {
+  animation: fadeInUp 0.5s ease 0.3s both;
+}
+
+.list-heading {
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.list-count {
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+/* Grid */
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-3);
+}
+
+/* Empty State */
+.list-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--space-3);
+  text-align: center;
+  animation: fadeInUp 0.4s ease;
+}
+
+.list-empty-illustration {
+  margin-bottom: var(--space-3);
+  opacity: 0.8;
+}
+
+.list-empty-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 320px;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .list-grid {
+    grid-template-columns: 1fr;
+  }
+}
