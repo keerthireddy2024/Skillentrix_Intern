@@ -1,0 +1,341 @@
+/* ===============================
+   🌐 GLOBAL STYLES
+=============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f8fafc;
+    color: #1e293b;
+    scroll-behavior: smooth;
+    line-height: 1.7;
+}
+
+/* ===============================
+   🔝 NAVBAR
+=============================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #334155;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Smooth underline */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: #0ea5e9;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #0ea5e9;
+}
+
+/* ===============================
+   🌙 THEME BUTTON
+=============================== */
+#themeToggle {
+    background: #0ea5e9;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#themeToggle:hover {
+    transform: scale(1.05);
+}
+
+/* ===============================
+   📄 SECTIONS
+=============================== */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    max-width: 650px;
+    margin: auto;
+    color: #475569;
+}
+
+/* ===============================
+   🏠 HERO
+=============================== */
+.hero {
+    text-align: center;
+    padding-top: 120px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: #0ea5e9;
+}
+
+.hero h3 {
+    margin-top: 10px;
+    font-weight: 500;
+    color: #475569;
+}
+
+.hero p {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+/* Buttons */
+.hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 20px;
+    background: #0ea5e9;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(14,165,233,0.3);
+}
+
+.btn-outline {
+    padding: 12px 20px;
+    border: 1px solid #0ea5e9;
+    color: #0ea5e9;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #0ea5e9;
+    color: white;
+}
+
+/* ===============================
+   🛠 SKILLS
+=============================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.skill-card {
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===============================
+   📂 PROJECTS
+=============================== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   📩 CONTACT
+=============================== */
+.contact form {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: auto;
+    gap: 12px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #0ea5e9;
+}
+
+textarea {
+    resize: none;
+    height: 110px;
+}
+
+.contact-info {
+    margin-top: 20px;
+    color: #475569;
+}
+
+/* ===============================
+   📊 MESSAGE CARDS
+=============================== */
+.message-card {
+    background: white;
+    padding: 15px;
+    margin: 15px auto;
+    border-radius: 12px;
+    width: 90%;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.message-card span {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+/* ===============================
+   🌙 DARK MODE
+=============================== */
+.dark {
+    background: #0f172a;
+    color: white;
+}
+
+.dark .navbar {
+    background: rgba(15,23,42,0.8);
+}
+
+.dark .section p,
+.dark .hero h3 {
+    color: #cbd5f5;
+}
+
+.dark .skill-card,
+.dark .project-card,
+.dark .message-card {
+    background: #1e293b;
+}
+
+.dark input,
+.dark textarea {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: white;
+}
+
+/* ===============================
+   🔻 FOOTER
+=============================== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f172a;
+    color: white;
+}
+
+/* ===============================
+   📱 RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    form {
+        width: 90%;
+    }
+}
